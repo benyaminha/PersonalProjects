@@ -1,0 +1,21 @@
+import os
+import shutil
+from pathlib import Path
+
+print("What folder tho")
+#take input from user
+specificFolder = str(input())
+#concatenate strings
+src = "/Users/benyaminha/workspaces/" + specificFolder
+dest = "/Users/benyaminha/Desktop/testusb"
+
+files = os.listdir(src)
+
+if len(files) == 0:
+    print("This bitch empty; yeet")
+
+else: 
+    for f in files: 
+        shutil.copy2(os.path.join(src,f), dest)
+print("Done.")
+       
